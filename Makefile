@@ -78,6 +78,6 @@ checksum:
 
 release:
 	gh release create 105.0.0-5126 \
-		out/Cronet.xcframework.zip \
+		README.md \
 		-n "body"
 		-t "105.0.0-5126"
