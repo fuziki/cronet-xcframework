@@ -1,5 +1,6 @@
 CRONET_VERSION=103.0.5060.53
 RELEASE_VERSION=103.0.53-5060
+CHANNEL=BETA
 
 GSUTIL=gsutil/gsutil
 GSUTIL_DIR=tmp/gsutil
@@ -92,5 +93,5 @@ update-package:
 release:
 	gh release create ${RELEASE_VERSION} \
 		out/Cronet.xcframework.zip \
-		-n "${CRONET_VERSION}"
-		-t "${RELEASE_VERSION}"
+		-n "current_version: ${CRONET_VERSION}\nchannel: ${CHANNEL}"
+		-t "${RELEASE_VERSION}-${CHANNEL}"
