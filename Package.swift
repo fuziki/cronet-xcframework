@@ -17,6 +17,6 @@ let package = Package(
         .binaryTarget(
             name: "Cronet",
             url: "https://github.com/fuziki/Cronet.xcframework/releases/download/103.0.53-5060/Cronet.xcframework.zip",
-            checksum: "84f188adc051372e92b847d3c7b7223a026d72486c08909de30ae374acb16941")
+            checksum: "92b3492975a0bde3c52b0e24aefcc57ec9dc871d4b660f1c0c59b57eb253a79a")
     ]
 )
