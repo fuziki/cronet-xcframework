@@ -1,5 +1,7 @@
+CRONET_VERSION=103.0.5060.53
+RELEASE_VERSION=103.0.53-5060
+
 GSUTIL=gsutil/gsutil
-CRONET_VERSION=105.0.5126.0
 GSUTIL_DIR=tmp/gsutil
 DL_DIR=tmp/dl
 FAT_DIR=tmp/fat
@@ -79,7 +81,7 @@ CHECKSUM = $(shell swift package compute-checksum out/Cronet.xcframework.zip)
 update-package:
 	echo ${CHECKSUM}
 	sed \
-		-e "s/VERSION/105.0.0-5126/" \
+		-e "s/VERSION/${RELEASE_VERSION}/" \
 		-e "s/CHECKSUM/${CHECKSUM}/" \
 		template/_Package.swift \
 		> Package.swift
@@ -88,7 +90,7 @@ update-package:
 	git push origin HEAD
 
 release:
-	gh release create 105.0.0-5126 \
+	gh release create ${RELEASE_VERSION} \
 		out/Cronet.xcframework.zip \
 		-n "${CRONET_VERSION}"
-		-t "105.0.0-5126"
+		-t "${RELEASE_VERSION}"
