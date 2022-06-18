@@ -12,8 +12,7 @@ help-gsutil:
 help-create-xcframework:
 	xcodebuild -create-xcframework -help
 
-#all: install-gsutil download fat-framework dsym xcframework zip checksum
-all: release
+all: install-gsutil download fat-framework dsym xcframework zip checksum release
 
 install-gsutil:
 	rm -rf tmp
@@ -78,6 +77,6 @@ checksum:
 
 release:
 	gh release create 105.0.0-5126 \
-		README.md \
-		-n "body"
+		out/Cronet.xcframework.zip \
+		-n "105.0.0-5126"
 		-t "105.0.0-5126"
