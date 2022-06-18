@@ -93,5 +93,5 @@ update-package:
 release:
 	gh release create ${RELEASE_VERSION} \
 		out/Cronet.xcframework.zip \
-		--title "${RELEASE_VERSION}-${CHANNEL}"
+		--title "${RELEASE_VERSION}"
 		--notes "current_version: ${CRONET_VERSION}, channel: ${CHANNEL}"
