@@ -12,7 +12,7 @@ help-gsutil:
 help-create-xcframework:
 	xcodebuild -create-xcframework -help
 
-all: install-gsutil download fat-framework dsym xcframework zip checksum release
+all: install-gsutil download fat-framework dsym xcframework zip checksum update-package release
 
 install-gsutil:
 	rm -rf tmp
@@ -75,8 +75,20 @@ zip:
 checksum:
 	swift package compute-checksum out/Cronet.xcframework.zip
 
+CHECKSUM = $(shell swift package compute-checksum out/Cronet.xcframework.zip)
+update-package:
+	echo ${CHECKSUM}
+	sed \
+		-e "s/VERSION/105.0.0-5126/" \
+		-e "s/CHECKSUM/${CHECKSUM}/" \
+		template/_Package.swift \
+		> Package.swift
+	git add Package.swift
+	git commit -m "update Package.swift"
+	git push origin HEAD
+
 release:
 	gh release create 105.0.0-5126 \
 		out/Cronet.xcframework.zip \
-		-n "105.0.0-5126"
+		-n "${CRONET_VERSION}"
 		-t "105.0.0-5126"
