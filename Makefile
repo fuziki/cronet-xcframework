@@ -37,7 +37,7 @@ download:
 fat-framework:
 	rm -rf ${FAT_DIR}
 	mkdir -p ${FAT_DIR}/Cronet.framework
-	cp -r ${DL_DIR}/Release-iphonesimulator/cronet/Cronet.framework ${FAT_DIR}/Cronet.framework
+	cp -r ${DL_DIR}/Release-iphonesimulator/cronet/Cronet.framework ${FAT_DIR}
 	lipo -create \
 		${DL_DIR}/Release-iphonesimulator/cronet/Cronet.framework/Cronet \
 		${DL_DIR}/Release-m1simulator/cronet/Cronet.framework/Cronet \
@@ -55,7 +55,7 @@ dsym:
 		-C ${DSYM_DIR}/Release-iphonesimulator
 	tar xf ${DL_DIR}/Release-m1simulator/cronet/Cronet.dSYM.tar.bz2 \
 		-C ${DSYM_DIR}/Release-m1simulator
-	cp -r ${DSYM_DIR}/Release-iphonesimulator/Cronet.dSYM ${DSYM_DIR}/arm64-x86-64/Cronet.dSYM
+	cp -r ${DSYM_DIR}/Release-iphonesimulator/Cronet.dSYM ${DSYM_DIR}/arm64-x86-64
 	lipo -create \
 		${DSYM_DIR}/Release-iphonesimulator/Cronet.dSYM/Contents/Resources/DWARF/Cronet \
 		${DSYM_DIR}/Release-m1simulator/Cronet.dSYM/Contents/Resources/DWARF/Cronet \
