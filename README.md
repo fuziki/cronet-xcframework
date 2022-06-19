@@ -13,7 +13,13 @@ It offers an easy-to-use, high performance, standards-compliant, and secure way 
 [https://chromium.googlesource.com/chromium/src/+/master/components/cronet](https://chromium.googlesource.com/chromium/src/+/master/components/cronet)
 
 > **Warning**  
-> Cronet is not support bitcode.
+> **Cronet does not support bitcode.**
+
+# Links
+* GCS Bucket  
+  [https://console.cloud.google.com/storage/browser/chromium-cronet/ios](https://console.cloud.google.com/storage/browser/chromium-cronet/ios)
+* Versions  
+  [https://omahaproxy.appspot.com/](https://omahaproxy.appspot.com/)
 
 # Installation
 Add cronet-xcframework to a Package.swift manifest.
