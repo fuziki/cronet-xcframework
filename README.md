@@ -28,7 +28,7 @@ Add cronet-xcframework to a Package.swift manifest.
 let package = Package(
     // ...
     dependencies: [
-        .package(url: "https://github.com/fuziki/cronet-xcframework", exact: "103.0.53-5060"),
+        .package(url: "https://github.com/fuziki/cronet-xcframework", exact: "104.0.5112-8"),
     ],
     targets: [
         .target(
