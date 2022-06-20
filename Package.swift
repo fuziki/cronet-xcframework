@@ -16,7 +16,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "Cronet",
-            url: "https://github.com/fuziki/cronet-xcframework/releases/download/103.0.5060-25/Cronet.xcframework.zip",
-            checksum: "ac9c2ab55d00fd875df0a947b1c8da738454afd3134f388c02e1bd7e6efe43f9")
+            url: "https://github.com/fuziki/cronet-xcframework/releases/download/104.0.5094-0/Cronet.xcframework.zip",
+            checksum: "1fa6474a83b5ba8289c7947456da59e5c6252dcf6b6bf41400d643f0d2372ded")
     ]
 )
