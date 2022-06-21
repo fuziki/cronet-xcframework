@@ -3,6 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-ios-lightgray.svg)
 ![Language](https://img.shields.io/badge/language-Swift%205.6-orange.svg)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+![Xcode](https://img.shields.io/badge/Xcode-Xcode13-brightgreen.svg?logo=xcode)
 
 cronet-xcframework is xcframework wrapper for [Cronet](https://chromium.googlesource.com/chromium/src/+/master/components/cronet).  
 Supports installation via Swift Package Manager.  
